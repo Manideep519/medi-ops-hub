@@ -11,8 +11,7 @@ require("dotenv").config();
 const app = express();
 
 const port = 3001;
-const url =
-  "mongodb+srv://anusha85:xWX494rLqJbVRXtp@cluster0.fsftrcj.mongodb.net/MediOpsHub?retryWrites=true&w=majority";
+const url = process.env.MONGO_URL;
 
 app.use(cors());
 app.use(bodyParser.json());
